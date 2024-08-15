@@ -56,7 +56,7 @@ export default function TableList(props:{filter:string}) {
             
             tasks.map((task:taskType) => (
                 (props.filter === 'all' || (props.filter === 'completed' && task.isCompleted) || (props.filter === 'not-completed' && !task.isCompleted)) &&
-                <TableRow key={task.task}>
+                <TableRow key={task.id}>
                     <TableCell className="font-medium">{task.isCompleted? <del className="text-gray-500">{task.task}</del>: <p>{task.task}</p>}</TableCell>
                     <TableCell>{task.isCompleted? <del className="text-gray-500">{task.description}</del>: <p>{task.description}</p>}</TableCell>
                     <TableCell className="flex justify-end">
