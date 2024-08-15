@@ -12,8 +12,6 @@ import {
 import { Button } from "./ui/button"
 import { tasksState } from "@/recoil/atom"
 import { useRecoilValue, useRecoilState } from "recoil"
-import { PiMinusCircleBold } from "react-icons/pi";
-import { HiOutlinePlusCircle } from "react-icons/hi";
 
 type taskType = {
     id: number,
@@ -69,8 +67,7 @@ export default function TableList(props:{filter:string}) {
                             </Button>
                                 :
                             <Button onClick={()=>toggleTask(task.id)} className="space-x-1.5  mr-1.5 bg-green-400 hover:bg-green-500">
-                                <span>
-                                Done</span>
+                                <span>Done</span>
                             </Button>
                         }
                         <Button onClick={()=>deleteTask(task.id)} className="space-x-1.5 ml-1.5 bg-red-500 hover:bg-red-400">
